@@ -3,11 +3,11 @@ import { PlusPattern } from "./decor/Decor";
 import { LinkedinIcon, InstagramIcon } from "./decor/SocialIcons";
 
 const MEMBERS = [
+  { name: "Muskan Gangwani", role: "Core Member", img: "" },
   { name: "Varun Mangwani", role: "Core Member", img: "" },
   { name: "Kavya Sharma", role: "Core Member", img: "" },
   { name: "Mahendra", role: "Core Member", img: "" },
   { name: "Akshat Nahar", role: "Core Member", img: "" },
-  { name: "Muskan Gangwani", role: "Core Member", img: "" },
   { name: "Kartik Soni", role: "Core Member", img: "" },
   { name: "Pramod Somani", role: "Core Member", img: "" },
   { name: "Vanshika", role: "Core Member", img: "" },
