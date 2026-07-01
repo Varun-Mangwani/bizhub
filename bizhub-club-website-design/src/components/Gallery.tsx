@@ -3,21 +3,36 @@ import { AnimatePresence, motion } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 import Reveal from "./decor/Reveal";
 
+import img1 from "../images/img1.webp";
+import img2 from "../images/_Celebrating innovation_ teamwork_ and fresh thinking_ Congratulations to the winning team of the Brand Rejuvenation Challenge_ and kudos to all participa_2.webp";
+import img3 from "../images/_Celebrating innovation_ teamwork_ and fresh thinking_ Congratulations to the winning team of the Brand Rejuvenation Challenge_ and kudos to all participa_3.webp";
+import img4 from "../images/_Celebrating innovation_ teamwork_ and fresh thinking_ Congratulations to the winning team of the Brand Rejuvenation Challenge_ and kudos to all participa_4.webp";
+import img5 from "../images/_From boardrooms to back offices _ is AI taking ov(JPG).jpg.jpeg";
+import img6 from "../images/_From boardrooms to back offices _ is AI taking ov(JPG)_1.jpg.jpeg";
+import img7 from "../images/_From boardrooms to back offices _ is AI taking ov(JPG)_2.jpg.jpeg";
+import img8 from "../images/_From boardrooms to back offices _ is AI taking ov(JPG)_3.jpg (1).jpeg";
+import img9 from "../images/_From boardrooms to back offices _ is AI taking ov(JPG)_3.jpg.jpeg";
+import img10 from "../images/_Success is not just about winning_ but about the ideas you contribute along the way._ ✨__BizHub Club proudly congratulates Varun Mangwani🎉 for being (.webp";
+import img11 from "../images/_Success is not just about winning_ but about the ideas you contribute along the way._ ✨__BizHub Club proudly congratulates Varun Mangwani🎉 for being_1.webp";
+import img12 from "../images/_Success is not just about winning_ but about the ideas you contribute along the way._ ✨__BizHub Club proudly congratulates Varun Mangwani🎉 for being_2.webp";
+import img13 from "../images/_Success is not just about winning_ but about the ideas you contribute along the way._ ✨__BizHub Club proudly congratulates Varun Mangwani🎉 for being_3.webp";
+
 const CATEGORIES = ["All", "Events", "Workshops", "Competitions", "Networking"] as const;
 
 const IMAGES = [
-  { src: "https://images.pexels.com/photos/8761310/pexels-photo-8761310.jpeg?auto=compress&cs=tinysrgb&h=900", cat: "Events", tall: true },
-  { src: "https://images.pexels.com/photos/28683737/pexels-photo-28683737.jpeg?auto=compress&cs=tinysrgb&h=900", cat: "Workshops", tall: false },
-  { src: "https://images.pexels.com/photos/8761650/pexels-photo-8761650.jpeg?auto=compress&cs=tinysrgb&h=900", cat: "Networking", tall: false },
-  { src: "https://images.pexels.com/photos/8761636/pexels-photo-8761636.jpeg?auto=compress&cs=tinysrgb&h=900", cat: "Networking", tall: true },
-  { src: "https://images.pexels.com/photos/15141493/pexels-photo-15141493.jpeg?auto=compress&cs=tinysrgb&h=900", cat: "Events", tall: false },
-  { src: "https://images.pexels.com/photos/8761631/pexels-photo-8761631.jpeg?auto=compress&cs=tinysrgb&h=900", cat: "Workshops", tall: true },
-  { src: "https://images.pexels.com/photos/18999484/pexels-photo-18999484.jpeg?auto=compress&cs=tinysrgb&h=900", cat: "Competitions", tall: false },
-  { src: "https://images.pexels.com/photos/8761308/pexels-photo-8761308.jpeg?auto=compress&cs=tinysrgb&h=900", cat: "Networking", tall: false },
-  { src: "https://images.pexels.com/photos/3321802/pexels-photo-3321802.jpeg?auto=compress&cs=tinysrgb&h=900", cat: "Competitions", tall: true },
-  { src: "https://images.pexels.com/photos/31772887/pexels-photo-31772887.jpeg?auto=compress&cs=tinysrgb&h=900", cat: "Competitions", tall: false },
-  { src: "https://images.pexels.com/photos/7942525/pexels-photo-7942525.jpeg?auto=compress&cs=tinysrgb&h=900", cat: "Events", tall: false },
-  { src: "https://images.pexels.com/photos/31956997/pexels-photo-31956997.jpeg?auto=compress&cs=tinysrgb&h=900", cat: "Events", tall: true },
+  { src: img1, cat: "Competitions", tall: true },
+  { src: img2, cat: "Events", tall: false },
+  { src: img3, cat: "Networking", tall: false },
+  { src: img4, cat: "Competitions", tall: true },
+  { src: img5, cat: "Workshops", tall: false },
+  { src: img6, cat: "Workshops", tall: true },
+  { src: img7, cat: "Networking", tall: false },
+  { src: img8, cat: "Events", tall: false },
+  { src: img9, cat: "Workshops", tall: true },
+  { src: img10, cat: "Competitions", tall: false },
+  { src: img11, cat: "Events", tall: true },
+  { src: img12, cat: "Networking", tall: false },
+  { src: img13, cat: "Competitions", tall: false },
 ];
 
 export default function Gallery() {
@@ -53,11 +68,10 @@ export default function Gallery() {
               <button
                 key={cat}
                 onClick={() => setActive(cat)}
-                className={`rounded-full border px-5 py-2 text-sm font-medium transition-all duration-300 ${
-                  active === cat
+                className={`rounded-full border px-5 py-2 text-sm font-medium transition-all duration-300 ${active === cat
                     ? "border-[#111111] bg-[#111111] text-[#F5C518]"
                     : "border-[#EAEAEA] bg-white text-[#111111] hover:border-[#F5C518]"
-                }`}
+                  }`}
               >
                 {cat}
               </button>
@@ -76,9 +90,8 @@ export default function Gallery() {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.4 }}
                 onClick={() => openAt(img.src)}
-                className={`group relative mb-5 block w-full overflow-hidden rounded-[20px] border border-[#EAEAEA] ${
-                  img.tall ? "aspect-[3/4]" : "aspect-[4/3]"
-                }`}
+                className={`group relative mb-5 block w-full overflow-hidden rounded-[20px] border border-[#EAEAEA] ${img.tall ? "aspect-[3/4]" : "aspect-[4/3]"
+                  }`}
               >
                 <img
                   src={img.src}

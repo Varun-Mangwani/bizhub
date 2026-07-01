@@ -37,6 +37,12 @@ export default function Contact() {
             <h2 className="font-[Sora] text-4xl font-bold text-[#111111] sm:text-5xl">
               Let's Build Something Together
             </h2>
+            <div className="mt-6 rounded-xl bg-[#F5C518]/10 p-5 text-sm text-[#111111]">
+              <p className="font-medium">BizHub Club — Aryan College</p>
+              <p className="mt-2 text-[#6B7280]">Faculty Admin: <span className="font-semibold text-[#111111]">Tabassum Mam</span></p>
+              <p className="mt-1 text-[#6B7280]">CEO Position: To be elected by the club members</p>
+              <p className="mt-3 text-sm font-medium">Contact the admin to get involved or learn more about the club.</p>
+            </div>
           </div>
         </Reveal>
 
