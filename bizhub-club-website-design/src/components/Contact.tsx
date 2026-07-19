@@ -34,12 +34,12 @@ export default function Contact() {
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
             <p className="section-heading-eyebrow justify-center mb-5">Get in Touch</p>
-            <h2 className="font-[Sora] text-4xl font-bold text-[#111111] sm:text-5xl">
+            <h2 className="font-[Sora] text-4xl font-bold text-[#000000] sm:text-5xl">
               Let's Build Something Together
             </h2>
-            <div className="mt-6 rounded-xl bg-[#F5C518]/10 p-5 text-sm text-[#111111]">
+            <div className="mt-6 rounded-xl bg-[#4169E1]/10 p-5 text-sm text-[#000000]">
               <p className="font-medium">BizHub Club — Aryan College</p>
-              <p className="mt-2 text-[#6B7280]">Faculty Admin: <span className="font-semibold text-[#111111]">Tabassum Mam</span></p>
+              <p className="mt-2 text-[#6B7280]">Faculty Admin: <span className="font-semibold text-[#000000]">Tabassum Mam</span></p>
               <p className="mt-1 text-[#6B7280]">CEO Position: To be elected by the club members</p>
               <p className="mt-3 text-sm font-medium">Contact the admin to get involved or learn more about the club.</p>
             </div>
@@ -51,33 +51,33 @@ export default function Contact() {
             <form onSubmit={handleSubmit(onSubmit)} className="card p-8 lg:p-10">
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <div className="sm:col-span-1">
-                  <label className="mb-2 block text-sm font-medium text-[#111111]">Full Name</label>
+                  <label className="mb-2 block text-sm font-medium text-[#000000]">Full Name</label>
                   <input
                     {...register("name", { required: "Name is required" })}
                     placeholder="Your name"
-                    className="w-full rounded-xl border border-[#EAEAEA] bg-white px-4 py-3 text-sm text-[#111111] outline-none transition-colors focus:border-[#F5C518]"
+                    className="w-full rounded-xl border border-[#EAEAEA] bg-[#ECDBCC] px-4 py-3 text-sm text-[#000000] outline-none transition-colors focus:border-[#4169E1]"
                   />
                   {errors.name && <p className="mt-1.5 text-xs text-[#6B7280]">{errors.name.message}</p>}
                 </div>
                 <div className="sm:col-span-1">
-                  <label className="mb-2 block text-sm font-medium text-[#111111]">Email</label>
+                  <label className="mb-2 block text-sm font-medium text-[#000000]">Email</label>
                   <input
                     {...register("email", {
                       required: "Email is required",
                       pattern: { value: /^\S+@\S+\.\S+$/, message: "Enter a valid email" },
                     })}
                     placeholder="you@example.com"
-                    className="w-full rounded-xl border border-[#EAEAEA] bg-white px-4 py-3 text-sm text-[#111111] outline-none transition-colors focus:border-[#F5C518]"
+                    className="w-full rounded-xl border border-[#EAEAEA] bg-[#ECDBCC] px-4 py-3 text-sm text-[#000000] outline-none transition-colors focus:border-[#4169E1]"
                   />
                   {errors.email && <p className="mt-1.5 text-xs text-[#6B7280]">{errors.email.message}</p>}
                 </div>
                 <div className="sm:col-span-2">
-                  <label className="mb-2 block text-sm font-medium text-[#111111]">Message</label>
+                  <label className="mb-2 block text-sm font-medium text-[#000000]">Message</label>
                   <textarea
                     {...register("message", { required: "Please add a short message" })}
                     rows={5}
                     placeholder="Tell us about your idea or query..."
-                    className="w-full resize-none rounded-xl border border-[#EAEAEA] bg-white px-4 py-3 text-sm text-[#111111] outline-none transition-colors focus:border-[#F5C518]"
+                    className="w-full resize-none rounded-xl border border-[#EAEAEA] bg-[#ECDBCC] px-4 py-3 text-sm text-[#000000] outline-none transition-colors focus:border-[#4169E1]"
                   />
                   {errors.message && <p className="mt-1.5 text-xs text-[#6B7280]">{errors.message.message}</p>}
                 </div>
@@ -101,29 +101,29 @@ export default function Contact() {
             <div className="flex h-full flex-col justify-between gap-10">
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#F5C518]/15">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#4169E1]/15">
                     <Mail size={18} />
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-[#111111]">Email</p>
+                    <p className="text-sm font-medium text-[#000000]">Email</p>
                     <p className="mt-1 text-sm text-[#6B7280]">bizhubclub@aryancollege.edu.in</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#F5C518]/15">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#4169E1]/15">
                     <Phone size={18} />
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-[#111111]">Phone</p>
+                    <p className="text-sm font-medium text-[#000000]">Phone</p>
                     <p className="mt-1 text-sm text-[#6B7280]">+91 98765 43210</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#F5C518]/15">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#4169E1]/15">
                     <MapPin size={18} />
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-[#111111]">Address</p>
+                    <p className="text-sm font-medium text-[#000000]">Address</p>
                     <p className="mt-1 text-sm text-[#6B7280]">Aryan College Campus, Innovation Block, Room 204</p>
                   </div>
                 </div>
@@ -140,10 +140,10 @@ export default function Contact() {
               </div>
 
               <div className="flex gap-3">
-                <a href="#" aria-label="Instagram" className="flex h-11 w-11 items-center justify-center rounded-full border border-[#EAEAEA] transition-colors hover:border-[#F5C518] hover:bg-[#F5C518]/10">
+                <a href="#" aria-label="Instagram" className="flex h-11 w-11 items-center justify-center rounded-full border border-[#EAEAEA] transition-colors hover:border-[#4169E1] hover:bg-[#4169E1]/10">
                   <InstagramIcon size={18} />
                 </a>
-                <a href="#" aria-label="LinkedIn" className="flex h-11 w-11 items-center justify-center rounded-full border border-[#EAEAEA] transition-colors hover:border-[#F5C518] hover:bg-[#F5C518]/10">
+                <a href="#" aria-label="LinkedIn" className="flex h-11 w-11 items-center justify-center rounded-full border border-[#EAEAEA] transition-colors hover:border-[#4169E1] hover:bg-[#4169E1]/10">
                   <LinkedinIcon size={18} />
                 </a>
               </div>

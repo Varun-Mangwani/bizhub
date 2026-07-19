@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowUpRight } from "lucide-react";
+import bizhubLogo from "../images/bizhub_logo.jpeg";
 
 const NAV_ITEMS = [
   { label: "Home", href: "#home" },
@@ -38,11 +39,9 @@ export default function Navbar() {
     >
       <div className="container-px mx-auto flex max-w-[1440px] items-center justify-between">
         <a href="#home" onClick={(e) => { e.preventDefault(); handleNav("#home"); }} className="flex items-center gap-2.5">
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#111111]">
-            <span className="font-[Sora] text-sm font-bold text-[#F5C518]">B</span>
-          </span>
-          <span className="font-[Sora] text-[15px] font-bold tracking-tight text-[#111111]">
-            BizHub<span className="text-[#F5C518]">.</span>
+          <img src={bizhubLogo} alt="BizHub Logo" className="h-10 w-auto object-contain rounded-md" />
+          <span className="font-[Sora] text-[15px] font-bold tracking-tight text-[#000000]">
+            BizHub<span className="text-[#4169E1]">.</span>
           </span>
         </a>
 
@@ -68,7 +67,7 @@ export default function Navbar() {
         </a>
 
         <button
-          className="lg:hidden text-[#111111]"
+          className="lg:hidden text-[#000000]"
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
         >
@@ -83,7 +82,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:hidden overflow-hidden bg-white border-t border-[#EAEAEA]"
+            className="lg:hidden overflow-hidden bg-[#ECDBCC] border-t border-[#EAEAEA]"
           >
             <div className="flex flex-col gap-1 px-6 py-6">
               {NAV_ITEMS.map((item) => (
@@ -91,7 +90,7 @@ export default function Navbar() {
                   key={item.href}
                   href={item.href}
                   onClick={(e) => { e.preventDefault(); handleNav(item.href); }}
-                  className="py-3 text-base font-medium text-[#111111] border-b border-[#F8F8F8]"
+                  className="py-3 text-base font-medium text-[#000000] border-b border-[#F8F8F8]"
                 >
                   {item.label}
                 </a>

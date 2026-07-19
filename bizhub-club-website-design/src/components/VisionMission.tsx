@@ -10,7 +10,7 @@ export default function VisionMission() {
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
             <p className="section-heading-eyebrow justify-center mb-5">Purpose</p>
-            <h2 className="font-[Sora] text-4xl font-bold text-[#111111] sm:text-5xl">
+            <h2 className="font-[Sora] text-4xl font-bold text-[#000000] sm:text-5xl">
               Vision &amp; Mission
             </h2>
           </div>
@@ -21,10 +21,10 @@ export default function VisionMission() {
             <div className="card relative overflow-hidden p-10 lg:p-12 h-full">
               <GridOverlay className="opacity-60" />
               <div className="relative">
-                <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F5C518]/15">
-                  <Eye className="text-[#111111]" size={26} />
+                <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#4169E1]/15">
+                  <Eye className="text-[#000000]" size={26} />
                 </div>
-                <h3 className="font-[Sora] text-2xl font-bold text-[#111111]">Our Vision</h3>
+                <h3 className="font-[Sora] text-2xl font-bold text-[#000000]">Our Vision</h3>
                 <p className="mt-5 text-[16px] leading-relaxed text-[#6B7280]">
                   To build a thriving ecosystem within Aryan College where every student has the
                   confidence, network, and resources to transform an idea into an impactful
@@ -35,12 +35,12 @@ export default function VisionMission() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <div className="relative overflow-hidden rounded-[24px] bg-[#111111] p-10 lg:p-12 h-full">
+            <div className="relative overflow-hidden rounded-[24px] bg-[#000000] p-10 lg:p-12 h-full">
               <GridOverlay className="opacity-10" />
-              <div className="pointer-events-none absolute -bottom-16 -right-16 h-56 w-56 rounded-full bg-[#F5C518]/10 blur-3xl" />
+              <div className="pointer-events-none absolute -bottom-16 -right-16 h-56 w-56 rounded-full bg-[#4169E1]/10 blur-3xl" />
               <div className="relative">
-                <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F5C518]/20">
-                  <Compass className="text-[#F5C518]" size={26} />
+                <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#4169E1]/20">
+                  <Compass className="text-[#4169E1]" size={26} />
                 </div>
                 <h3 className="font-[Sora] text-2xl font-bold text-white">Our Mission</h3>
                 <p className="mt-5 text-[16px] leading-relaxed text-white/60">

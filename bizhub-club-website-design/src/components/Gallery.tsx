@@ -38,8 +38,10 @@ const IMAGES = [
 export default function Gallery() {
   const [active, setActive] = useState<(typeof CATEGORIES)[number]>("All");
   const [lightbox, setLightbox] = useState<number | null>(null);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const filtered = IMAGES.filter((img) => active === "All" || img.cat === active);
+  const displayImages = isExpanded ? filtered : filtered.slice(0, 8);
 
   const openAt = (src: string) => {
     const idx = filtered.findIndex((i) => i.src === src);
@@ -50,12 +52,12 @@ export default function Gallery() {
   const prev = () => setLightbox((i) => (i === null ? null : (i - 1 + filtered.length) % filtered.length));
 
   return (
-    <section id="gallery" className="relative py-28 lg:py-36 bg-[#F8F8F8]">
+    <section id="gallery" className="relative py-28 lg:py-36 bg-[#ECDBCC]">
       <div className="container-px mx-auto max-w-[1440px]">
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
             <p className="section-heading-eyebrow justify-center mb-5">Moments</p>
-            <h2 className="font-[Sora] text-4xl font-bold text-[#111111] sm:text-5xl">Gallery</h2>
+            <h2 className="font-[Sora] text-4xl font-bold text-[#000000] sm:text-5xl">Gallery</h2>
             <p className="mt-5 text-[16px] text-[#6B7280]">
               A glimpse into the energy, ideas, and collaboration that define BizHub Club.
             </p>
@@ -69,8 +71,8 @@ export default function Gallery() {
                 key={cat}
                 onClick={() => setActive(cat)}
                 className={`rounded-full border px-5 py-2 text-sm font-medium transition-all duration-300 ${active === cat
-                    ? "border-[#111111] bg-[#111111] text-[#F5C518]"
-                    : "border-[#EAEAEA] bg-white text-[#111111] hover:border-[#F5C518]"
+                    ? "border-[#000000] bg-[#000000] text-[#4169E1]"
+                    : "border-[#EAEAEA] bg-[#ECDBCC] text-[#000000] hover:border-[#4169E1]"
                   }`}
               >
                 {cat}
@@ -81,7 +83,7 @@ export default function Gallery() {
 
         <div className="mt-12 columns-2 gap-5 sm:columns-3 lg:columns-4">
           <AnimatePresence>
-            {filtered.map((img) => (
+            {displayImages.map((img) => (
               <motion.button
                 layout
                 key={img.src}
@@ -99,13 +101,24 @@ export default function Gallery() {
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                 />
-                <div className="absolute inset-0 flex items-center justify-center bg-[#111111]/0 transition-colors duration-400 group-hover:bg-[#111111]/30">
+                <div className="absolute inset-0 flex items-center justify-center bg-[#000000]/0 transition-colors duration-400 group-hover:bg-[#000000]/30">
                   <ZoomIn className="text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100" size={24} />
                 </div>
               </motion.button>
             ))}
           </AnimatePresence>
         </div>
+
+        {!isExpanded && filtered.length > 8 && (
+          <div className="mt-12 flex justify-center">
+            <button
+              onClick={() => setIsExpanded(true)}
+              className="btn-primary"
+            >
+              View Full Gallery
+            </button>
+          </div>
+        )}
       </div>
 
       <AnimatePresence>
@@ -114,18 +127,18 @@ export default function Gallery() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-[#111111]/90 p-6"
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-[#000000]/90 p-6"
             onClick={() => setLightbox(null)}
           >
             <button
-              className="absolute top-6 right-6 text-white/80 hover:text-[#F5C518]"
+              className="absolute top-6 right-6 text-white/80 hover:text-[#4169E1]"
               onClick={() => setLightbox(null)}
               aria-label="Close"
             >
               <X size={32} />
             </button>
             <button
-              className="absolute left-4 sm:left-10 text-white/80 hover:text-[#F5C518]"
+              className="absolute left-4 sm:left-10 text-white/80 hover:text-[#4169E1]"
               onClick={(e) => { e.stopPropagation(); prev(); }}
               aria-label="Previous"
             >
@@ -142,7 +155,7 @@ export default function Gallery() {
               onClick={(e) => e.stopPropagation()}
             />
             <button
-              className="absolute right-4 sm:right-10 text-white/80 hover:text-[#F5C518]"
+              className="absolute right-4 sm:right-10 text-white/80 hover:text-[#4169E1]"
               onClick={(e) => { e.stopPropagation(); next(); }}
               aria-label="Next"
             >

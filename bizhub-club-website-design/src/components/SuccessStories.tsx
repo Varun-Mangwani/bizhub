@@ -35,14 +35,14 @@ const STORIES = [
 
 export default function SuccessStories() {
   return (
-    <section id="stories" className="relative overflow-hidden bg-[#111111] py-28 lg:py-36">
+    <section id="stories" className="relative overflow-hidden bg-[#000000] py-28 lg:py-36">
       <div className="pointer-events-none absolute -top-40 right-0 opacity-10">
         <OrbitRings className="h-[500px] w-[500px]" />
       </div>
       <div className="container-px relative mx-auto max-w-[1440px]">
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
-            <p className="section-heading-eyebrow justify-center mb-5 !text-[#F5C518]">Success Stories</p>
+            <p className="section-heading-eyebrow justify-center mb-5 !text-[#4169E1]">Success Stories</p>
             <h2 className="font-[Sora] text-4xl font-bold text-white sm:text-5xl">
               From Idea to Industry
             </h2>
@@ -64,14 +64,14 @@ export default function SuccessStories() {
           >
             {STORIES.map((s) => (
               <SwiperSlide key={s.name}>
-                <div className="flex h-full flex-col rounded-[24px] border border-white/10 bg-white/[0.04] p-8 backdrop-blur-sm">
-                  <Quote className="mb-5 text-[#F5C518]" size={28} />
+                <div className="flex h-full flex-col rounded-[24px] border border-white/10 bg-[#ECDBCC]/[0.04] p-8 backdrop-blur-sm">
+                  <Quote className="mb-5 text-[#4169E1]" size={28} />
                   <p className="flex-1 text-[15px] leading-relaxed text-white/70">"{s.quote}"</p>
                   <div className="mt-8 flex items-center gap-4 border-t border-white/10 pt-6">
                     <img src={s.img} alt={s.name} loading="lazy" className="h-12 w-12 rounded-full object-cover" />
                     <div>
                       <p className="font-[Sora] text-sm font-semibold text-white">{s.name}</p>
-                      <p className="mt-0.5 text-xs text-[#F5C518]">{s.achievement}</p>
+                      <p className="mt-0.5 text-xs text-[#4169E1]">{s.achievement}</p>
                     </div>
                   </div>
                 </div>
@@ -80,10 +80,10 @@ export default function SuccessStories() {
           </Swiper>
 
           <div className="mt-10 flex justify-center gap-4">
-            <button className="story-prev flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition-colors hover:border-[#F5C518] hover:text-[#F5C518]" aria-label="Previous">
+            <button className="story-prev flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition-colors hover:border-[#4169E1] hover:text-[#4169E1]" aria-label="Previous">
               <ArrowLeft size={18} />
             </button>
-            <button className="story-next flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition-colors hover:border-[#F5C518] hover:text-[#F5C518]" aria-label="Next">
+            <button className="story-next flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition-colors hover:border-[#4169E1] hover:text-[#4169E1]" aria-label="Next">
               <ArrowRight size={18} />
             </button>
           </div>

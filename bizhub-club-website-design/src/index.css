@@ -5,10 +5,10 @@
   --font-inter: "Inter", sans-serif;
   --font-grotesk: "Space Grotesk", "Inter", sans-serif;
 
-  --color-ink: #111111;
-  --color-paper: #ffffff;
-  --color-yellow: #f5c518;
-  --color-yellow-soft: #ffd54a;
+  --color-ink: #000000;
+  --color-paper: #ECDBCC;
+  --color-yellow: #4169E1;
+  --color-yellow-soft: #5b7ae6;
   --color-mist: #f8f8f8;
   --color-line: #eaeaea;
   --color-muted: #6b7280;
@@ -16,13 +16,13 @@
 
 html {
   scroll-behavior: auto;
-  background: #ffffff;
+  background: #ECDBCC;
 }
 
 body {
   font-family: var(--font-inter);
   color: var(--color-ink);
-  background: #ffffff;
+  background: #ECDBCC;
   overflow-x: hidden;
 }
 
@@ -36,8 +36,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::selection {
-  background: #f5c518;
-  color: #111111;
+  background: #4169E1;
+  color: #ECDBCC;
 }
 
 /* Scrollbar */
@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #ffffff;
+  background: #ECDBCC;
 }
 ::-webkit-scrollbar-thumb {
   background: #eaeaea;
@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-gradient-ink {
-  background: linear-gradient(180deg, #111111 0%, #3a3a3a 100%);
+  background: linear-gradient(180deg, #000000 0%, #3a3a3a 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -82,18 +82,18 @@ h1, h2, h3, h4, h5, h6 {
   gap: 0.5rem;
   padding: 0.95rem 2rem;
   border-radius: 9999px;
-  background: #f5c518;
-  color: #111111;
+  background: #4169E1;
+  color: #ECDBCC;
   font-weight: 600;
   font-size: 0.95rem;
-  border: 1px solid #f5c518;
+  border: 1px solid #4169E1;
   transition: background 0.35s ease, color 0.35s ease, transform 0.3s ease, box-shadow 0.3s ease;
   will-change: transform;
 }
 .btn-primary:hover {
-  background: #111111;
-  color: #f5c518;
-  border-color: #111111;
+  background: #000000;
+  color: #4169E1;
+  border-color: #000000;
   transform: translateY(-2px);
   box-shadow: 0 12px 30px -8px rgba(17,17,17,0.35);
 }
@@ -106,36 +106,36 @@ h1, h2, h3, h4, h5, h6 {
   gap: 0.5rem;
   padding: 0.95rem 2rem;
   border-radius: 9999px;
-  background: #ffffff;
-  color: #111111;
+  background: #ECDBCC;
+  color: #000000;
   font-weight: 600;
   font-size: 0.95rem;
-  border: 1.5px solid #111111;
+  border: 1.5px solid #000000;
   transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 .btn-secondary:hover {
-  border-color: #f5c518;
+  border-color: #4169E1;
   transform: translateY(-2px);
   box-shadow: 0 12px 30px -10px rgba(245,197,24,0.5);
 }
 
 .card {
   border-radius: 24px;
-  background: #ffffff;
+  background: #ECDBCC;
   border: 1px solid #eaeaea;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
 }
 .card:hover {
   transform: translateY(-6px);
   box-shadow: 0 25px 50px -20px rgba(17,17,17,0.15);
-  border-color: #f5c518;
+  border-color: #4169E1;
 }
 
 .nav-link {
   position: relative;
   font-size: 0.9rem;
   font-weight: 500;
-  color: #111111;
+  color: #000000;
   padding-bottom: 4px;
 }
 .nav-link::after {
@@ -145,7 +145,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   height: 2px;
   width: 0%;
-  background: #f5c518;
+  background: #4169E1;
   transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .nav-link:hover::after {
@@ -220,7 +220,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 8px;
   height: 8px;
   border-radius: 999px;
-  background: #f5c518;
+  background: #4169E1;
   display: inline-block;
 }
 

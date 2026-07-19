@@ -54,8 +54,8 @@ export default function Stats() {
         <div className="stats-card glass grid grid-cols-2 gap-8 rounded-[28px] border border-[#EAEAEA] px-8 py-10 shadow-[0_30px_80px_-30px_rgba(17,17,17,0.15)] sm:grid-cols-3 lg:grid-cols-5">
           {STATS.map(({ icon: Icon, value, suffix, label }) => (
             <div key={label} className="flex flex-col items-center text-center gap-2">
-              <Icon className="mb-1 text-[#F5C518]" size={26} strokeWidth={1.8} />
-              <p className="font-num text-3xl font-bold text-[#111111] sm:text-4xl">
+              <Icon className="mb-1 text-[#4169E1]" size={26} strokeWidth={1.8} />
+              <p className="font-num text-3xl font-bold text-[#000000] sm:text-4xl">
                 <span className="counter-num" data-value={value}>0</span>{suffix}
               </p>
               <p className="text-xs font-medium text-[#6B7280] sm:text-sm">{label}</p>

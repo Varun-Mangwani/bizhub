@@ -87,9 +87,9 @@ export default function Hero() {
         {/* Left */}
         <div>
           <p className="hero-eyebrow section-heading-eyebrow mb-6">BizHub Club · Aryan College</p>
-          <h1 className="font-[Sora] text-[44px] leading-[1.05] font-bold tracking-tight text-[#111111] sm:text-[58px] lg:text-[76px]">
+          <h1 className="font-[Sora] text-[44px] leading-[1.05] font-bold tracking-tight text-[#000000] sm:text-[58px] lg:text-[76px]">
             <span className="hero-line block overflow-hidden">Empowering</span>
-            <span className="hero-line block overflow-hidden">Tomorrow's <span className="text-[#F5C518]">Entrepreneurs</span>.</span>
+            <span className="hero-line block overflow-hidden">Tomorrow's <span className="text-[#4169E1]">Entrepreneurs</span>.</span>
           </h1>
           <p className="hero-sub mt-7 max-w-[520px] text-[17px] leading-relaxed text-[#6B7280]">
             BizHub Club is Aryan College's entrepreneurship community where ideas evolve into
@@ -111,36 +111,36 @@ export default function Hero() {
 
           <div className="mt-16 grid max-w-[420px] grid-cols-3 gap-6 border-t border-[#EAEAEA] pt-8">
             <div className="hero-stat">
-              <p className="font-num text-2xl font-semibold text-[#111111]">20+</p>
+              <p className="font-num text-2xl font-semibold text-[#000000]">20+</p>
               <p className="mt-1 text-xs text-[#6B7280]">Members</p>
             </div>
             <div className="hero-stat">
-              <p className="font-num text-2xl font-semibold text-[#111111]">25+</p>
+              <p className="font-num text-2xl font-semibold text-[#000000]">25+</p>
               <p className="mt-1 text-xs text-[#6B7280]">Events</p>
             </div>
             <div className="hero-stat">
-              <p className="font-num text-2xl font-semibold text-[#111111]">5+</p>
+              <p className="font-num text-2xl font-semibold text-[#000000]">5+</p>
               <p className="mt-1 text-xs text-[#6B7280]">Awards Won</p>
             </div>
           </div>
         </div>
 
         {/* Right — animated startup ecosystem */}
-        <div className="hero-art relative mx-auto h-[460px] w-full max-w-[580px] sm:h-[560px]">
+        <div className="hero-art hidden lg:block relative mx-auto h-[460px] w-full max-w-[580px] sm:h-[560px]">
           <div className="absolute inset-0 flex items-center justify-center">
             <OrbitRings className="h-[500px] w-[500px] sm:h-[620px] sm:w-[620px]" />
           </div>
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 animate-float-slow drop-shadow-2xl">
-            <WireframeRocket className="h-[210px] w-auto sm:h-[260px]" />
+            <WireframeRocket className="hidden sm:block h-[210px] w-auto sm:h-[260px]" />
           </div>
-          <div className="absolute -left-4 top-12 hidden rounded-2xl border border-white/50 bg-white/60 p-4 shadow-[0_8px_32px_rgba(0,0,0,0.06)] backdrop-blur-xl sm:block animate-float-slower">
+          <div className="absolute -left-4 top-12 hidden rounded-2xl border border-white/50 bg-[#ECDBCC]/60 p-4 shadow-[0_8px_32px_rgba(0,0,0,0.06)] backdrop-blur-xl sm:block animate-float-slower">
             <GrowthChart className="h-[90px] w-[140px]" />
           </div>
-          <div className="absolute bottom-6 -right-6 hidden rounded-2xl border border-white/50 bg-white/60 p-4 shadow-[0_8px_32px_rgba(0,0,0,0.06)] backdrop-blur-xl sm:block animate-float-slow">
+          <div className="absolute bottom-6 -right-6 hidden rounded-2xl border border-white/50 bg-[#ECDBCC]/60 p-4 shadow-[0_8px_32px_rgba(0,0,0,0.06)] backdrop-blur-xl sm:block animate-float-slow">
             <NetworkNodes className="h-[110px] w-[150px]" />
           </div>
           <DotMatrix className="hidden sm:block -bottom-10 left-4 opacity-60" />
-          <div className="absolute top-4 right-2 flex items-center gap-2 rounded-full border border-white/60 bg-white/80 px-5 py-2.5 text-sm font-semibold shadow-[0_8px_24px_rgba(0,0,0,0.05)] backdrop-blur-xl animate-float-slower text-[#111111]">
+          <div className="absolute top-4 right-2 hidden sm:flex items-center gap-2 rounded-full border border-white/60 bg-[#ECDBCC]/80 px-5 py-2.5 text-sm font-semibold shadow-[0_8px_24px_rgba(0,0,0,0.05)] backdrop-blur-xl animate-float-slower text-[#000000]">
             <span className="text-lg">🚀</span> <span>Idea <span className="text-[#6B7280]">→</span> Startup</span>
           </div>
         </div>

@@ -25,13 +25,13 @@ export default function About() {
                 loading="lazy"
               />
             </div>
-            <div className="absolute -bottom-8 -right-6 w-[230px] rounded-2xl border border-[#EAEAEA] bg-white p-5 shadow-xl sm:-right-10">
-              <Quote className="mb-2 text-[#F5C518]" size={22} />
-              <p className="text-sm leading-snug text-[#111111]">
+            <div className="absolute -bottom-8 -right-6 w-[230px] rounded-2xl border border-[#EAEAEA] bg-[#ECDBCC] p-5 shadow-xl sm:-right-10">
+              <Quote className="mb-2 text-[#4169E1]" size={22} />
+              <p className="text-sm leading-snug text-[#000000]">
                 "We don't just teach business, we build founders."
               </p>
             </div>
-            <div className="absolute -top-6 -left-6 hidden h-24 w-24 rounded-full border border-dashed border-[#F5C518] opacity-60 sm:block" />
+            <div className="absolute -top-6 -left-6 hidden h-24 w-24 rounded-full border border-dashed border-[#4169E1] opacity-60 sm:block" />
           </div>
         </Reveal>
 
@@ -40,8 +40,8 @@ export default function About() {
             <p className="section-heading-eyebrow mb-5">About BizHub</p>
           </Reveal>
           <Reveal delay={0.05}>
-            <h2 className="font-[Sora] text-4xl font-bold leading-tight text-[#111111] sm:text-5xl">
-              A community built for <span className="text-[#F5C518]">founders</span>, by founders.
+            <h2 className="font-[Sora] text-4xl font-bold leading-tight text-[#000000] sm:text-5xl">
+              A community built for <span className="text-[#4169E1]">founders</span>, by founders.
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
@@ -53,7 +53,7 @@ export default function About() {
             </p>
           </Reveal>
           <Reveal delay={0.15}>
-            <blockquote className="mt-8 border-l-2 border-[#F5C518] pl-6 text-lg font-medium italic text-[#111111]">
+            <blockquote className="mt-8 border-l-2 border-[#4169E1] pl-6 text-lg font-medium italic text-[#000000]">
               "Entrepreneurship is not a career path — it's a mindset. At BizHub, we build that
               mindset together."
             </blockquote>
@@ -63,8 +63,8 @@ export default function About() {
             <div className="mt-10 grid grid-cols-3 gap-4 border-t border-[#EAEAEA] pt-8">
               {HIGHLIGHTS.map(({ icon: Icon, value, label }) => (
                 <div key={label} className="card p-5 text-center">
-                  <Icon className="mx-auto mb-2 text-[#F5C518]" size={22} />
-                  <p className="font-num text-xl font-bold text-[#111111]">{value}</p>
+                  <Icon className="mx-auto mb-2 text-[#4169E1]" size={22} />
+                  <p className="font-num text-xl font-bold text-[#000000]">{value}</p>
                   <p className="mt-0.5 text-xs text-[#6B7280]">{label}</p>
                 </div>
               ))}
